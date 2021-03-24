@@ -8,17 +8,32 @@ main {
     width: 100vw;
     height: 100vh;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-}
-
-#slider {
-    display: flex;
     align-items: center;
 }
 
-#slider > i {
+#slider > .inner-slider {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#slider .inner-slider > i {
     font-size: 3rem;
     margin: 0 10px;
+}
+
+#slider > .controllers {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+#slider .controllers > i {
+    margin: 5px;
+    cursor: pointer;
+}
+
+#slider .controllers > i.active {
+    color: red;
 }

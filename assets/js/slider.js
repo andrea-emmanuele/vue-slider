@@ -1,4 +1,4 @@
-var slider = new Vue({
+let slider = new Vue({
     el: "#slider",
     data: {
         i: 0,
@@ -7,7 +7,8 @@ var slider = new Vue({
             "https://picsum.photos/id/29/800/500",
             "https://picsum.photos/id/16/800/500",
             "https://picsum.photos/id/12/800/500"
-        ]
+        ],
+        isActive: "active"
     },
     methods: {
         prev: function () {
@@ -29,6 +30,9 @@ var slider = new Vue({
             }
             else
                 this.i++;
+        },
+        move: function (i) {
+            this.i = i;
         }
     }
 })

@@ -9,9 +9,14 @@
 <body>
     <main>
         <div id="slider">
-            <i class="fas fa-arrow-left" @click="prev()"></i>
-            <img :src="images[i]">
-            <i class="fas fa-arrow-right" @click="next()"></i>
+            <div class="inner-slider">
+                <i class="fas fa-arrow-left" @click="prev()"></i>
+                <img :src="images[i]">
+                <i class="fas fa-arrow-right" @click="next()"></i>
+            </div>
+            <div class="controllers">
+                <i v-for="dot in images.length" :class="dot - 1 == i ? isActive : ''" class="fas fa-circle" @click="move(dot - 1)"></i>
+            </div>
         </div>
     </main>
 
