@@ -11,10 +11,24 @@ var slider = new Vue({
     },
     methods: {
         prev: function () {
+            const i = this.i;
+            const length = this.images.length - 1;
 
+            if (i < 1) {
+                this.i = length;
+            }
+            else
+                this.i--;
         },
         next: function () {
-            
+            const i = this.i;
+            const length = this.images.length - 1;
+
+            if (i >= length) {
+                this.i = 0;
+            }
+            else
+                this.i++;
         }
     }
 })
