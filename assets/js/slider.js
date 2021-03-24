@@ -33,6 +33,12 @@ let slider = new Vue({
         },
         move: function (i) {
             this.i = i;
+        },
+        interval: function () {
+            setInterval(this.next, 3000);
         }
+    },
+    created: function () {
+        this.interval();
     }
 })
